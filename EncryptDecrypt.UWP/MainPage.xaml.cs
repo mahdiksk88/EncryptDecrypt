@@ -31,5 +31,32 @@ namespace EncryptDecrypt.UWP
         {
             MainNav.IsBackEnabled = AppFrame.CanGoBack;
         }
+
+        private void MainNav_BackRequested(NavigationView sender, NavigationViewBackRequestedEventArgs args)
+        {
+            AppFrame.GoBack();
+        }
+
+        private void MainNav_ItemInvoked(NavigationView sender, NavigationViewItemInvokedEventArgs args)
+        {
+            switch(args.InvokedItemContainer.Tag)
+            {
+                case "TextEncryption":
+                    {
+                        AppFrame.Navigate(typeof(Pages.TextEncrypt));
+                        break;
+                    }
+                case "FileEncryption":
+                    {
+                        AppFrame.Navigate(typeof(Pages.FileEncrypt));
+                        break;
+                    }
+                case "FileDecryption":
+                    {
+                        AppFrame.Navigate(typeof(Pages.FileDecrypt));
+                        break;
+                    }
+            }
+        }
     }
 }

@@ -9,7 +9,9 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
     
     <Grid>
-        <NavigationView x:Name="MainNav" IsSettingsVisible="False" >
+        <NavigationView x:Name="MainNav" IsSettingsVisible="False" 
+                        BackRequested="MainNav_BackRequested"
+                        ItemInvoked="MainNav_ItemInvoked">
             <NavigationView.MenuItems>
                 <NavigationViewItem Tag="TextEncryption" Content="Text Encryption/Decryption" Icon="Message"/>
                 <NavigationViewItemSeparator/>

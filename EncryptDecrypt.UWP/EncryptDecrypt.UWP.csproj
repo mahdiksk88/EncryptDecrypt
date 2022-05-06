@@ -122,6 +122,15 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\FileDecrypt.xaml.cs">
+      <DependentUpon>FileDecrypt.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\FileEncrypt.xaml.cs">
+      <DependentUpon>FileEncrypt.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\TextEncrypt.xaml.cs">
+      <DependentUpon>TextEncrypt.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -147,6 +156,18 @@
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\FileDecrypt.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\FileEncrypt.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\TextEncrypt.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
