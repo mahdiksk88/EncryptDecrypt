@@ -9,11 +9,14 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
     
     <Grid>
-        <Grid.ColumnDefinitions>
-            
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            
-        </Grid.RowDefinitions>
+        <NavigationView x:Name="MainNav" IsSettingsVisible="False" >
+            <NavigationView.MenuItems>
+                <NavigationViewItem Tag="TextEncryption" Content="Text Encryption/Decryption" Icon="Message"/>
+                <NavigationViewItemSeparator/>
+                <NavigationViewItem Tag="FileEncryption" Content="File Encryption" Icon="OpenFile"/>
+                <NavigationViewItem Tag="FileDecryption" Content="File Decryption" Icon="Repair"/>
+            </NavigationView.MenuItems>
+            <Frame x:Name="AppFrame" Navigated="AppFrame_Navigated"/>
+        </NavigationView>
     </Grid>
 </Page>
